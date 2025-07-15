@@ -2,76 +2,118 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Insurance Inquiry Form</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Insurance Inquiry | Akash Insurance</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
-      background: #f3f4f6;
-      padding: 2rem;
-      max-width: 600px;
-      margin: auto;
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(135deg, #232526, #414345);
+      font-family: 'Segoe UI', sans-serif;
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
     }
+
+    .container {
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(20px);
+      padding: 30px 40px;
+      border-radius: 20px;
+      max-width: 450px;
+      width: 90%;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    }
+
     h1 {
       text-align: center;
-      color: #1e40af;
+      margin-bottom: 25px;
+      color: #00e6e6;
+      font-size: 24px;
     }
-    form {
-      background: white;
-      padding: 2rem;
-      border-radius: 8px;
-      box-shadow: 0 0 10px rgb(0 0 0 / 0.1);
-    }
+
     label {
+      margin-top: 15px;
       display: block;
-      margin-top: 1rem;
-      font-weight: bold;
+      font-weight: 600;
     }
-    select, input {
+
+    input, select, textarea {
       width: 100%;
-      padding: 0.5rem;
-      margin-top: 0.5rem;
-      border-radius: 4px;
-      border: 1px solid #ccc;
-    }
-    button {
-      margin-top: 1.5rem;
-      width: 100%;
-      background: #2563eb;
-      color: white;
+      padding: 10px;
+      margin-top: 8px;
+      border-radius: 8px;
       border: none;
-      padding: 1rem;
-      border-radius: 4px;
+      font-size: 1rem;
+      outline: none;
+    }
+
+    button {
+      margin-top: 25px;
+      width: 100%;
+      padding: 12px;
+      border: none;
+      border-radius: 10px;
+      background-color: #00e6e6;
+      color: #000;
+      font-weight: 700;
       font-size: 1rem;
       cursor: pointer;
+      transition: background 0.3s ease;
     }
+
     button:hover {
-      background: #1e40af;
+      background-color: #00bfbf;
+    }
+
+    .footer {
+      margin-top: 20px;
+      text-align: center;
+      font-size: 0.85rem;
+      color: #ccc;
+    }
+
+    .logo {
+      text-align: center;
+      margin-bottom: 10px;
+      font-size: 1.1rem;
     }
   </style>
 </head>
 <body>
-  <h1>Insurance Inquiry Form</h1>
-  <form action="https://formsubmit.co/prajapatiakash123@gmail.com" method="POST">
-    <label for="insurance">Choose Insurance Type:</label>
-    <select name="insurance" id="insurance" required>
-      <option value="">--Select--</option>
-      <option value="Car Insurance">Car Insurance</option>
-      <option value="Bike Insurance">Bike Insurance</option>
-      <option value="Gold Insurance">Gold Insurance</option>
-      <option value="Home Insurance">Home Insurance</option>
-    </select>
+  <div class="container">
+    <div class="logo">🚀 Akash Insurance Services</div>
+    <h1>Request a Quote</h1>
+    <form action="https://formspree.io/f/mdkdokga" method="POST">
+      <label for="name">Full Name</label>
+      <input type="text" id="name" name="name" required placeholder="Your Name"/>
 
-    <label for="name">Full Name:</label>
-    <input type="text" id="name" name="name" placeholder="Your full name" required />
+      <label for="email">Email Address</label>
+      <input type="email" id="email" name="email" required placeholder="example@mail.com"/>
 
-    <label for="phone">Mobile Number:</label>
-    <input type="tel" id="phone" name="phone" placeholder="Your mobile number" required />
+      <label for="phone">Mobile Number</label>
+      <input type="tel" id="phone" name="phone" required placeholder="10-digit mobile number" pattern="[0-9]{10}"/>
 
-    <label for="email">Email Address:</label>
-    <input type="email" id="email" name="email" placeholder="Your email" required />
+      <label for="insurance">Insurance Type</label>
+      <select id="insurance" name="insurance" required>
+        <option value="" disabled selected>-- Select Insurance Type --</option>
+        <option value="Car Insurance">🚗 Car Insurance</option>
+        <option value="Bike Insurance">🏍️ Bike Insurance</option>
+        <option value="Gold Insurance">💍 Gold Insurance</option>
+        <option value="Home Insurance">🏠 Home Insurance</option>
+        <option value="Mediclaim">🏥 Mediclaim Policy</option>
+        <option value="Term Plan">📄 Term Insurance</option>
+        <option value="Travel Insurance">✈️ Travel Insurance</option>
+      </select>
 
-    <button type="submit">Submit</button>
-  </form>
+      <label for="details">Additional Info (Optional)</label>
+      <textarea id="details" name="details" rows="3" placeholder="Any specific need?"></textarea>
+
+      <button type="submit">Submit Inquiry</button>
+    </form>
+    <div class="footer">You’ll receive a response shortly. Thank you!</div>
+  </div>
 </body>
 </html>
