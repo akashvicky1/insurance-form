@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Insurance Inquiry Form</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f3f4f6;
+      padding: 2rem;
+      max-width: 600px;
+      margin: auto;
+    }
+    h1 {
+      text-align: center;
+      color: #1e40af;
+    }
+    form {
+      background: white;
+      padding: 2rem;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgb(0 0 0 / 0.1);
+    }
+    label {
+      display: block;
+      margin-top: 1rem;
+      font-weight: bold;
+    }
+    select, input {
+      width: 100%;
+      padding: 0.5rem;
+      margin-top: 0.5rem;
+      border-radius: 4px;
+      border: 1px solid #ccc;
+    }
+    button {
+      margin-top: 1.5rem;
+      width: 100%;
+      background: #2563eb;
+      color: white;
+      border: none;
+      padding: 1rem;
+      border-radius: 4px;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+    button:hover {
+      background: #1e40af;
+    }
+  </style>
+</head>
+<body>
+  <h1>Insurance Inquiry Form</h1>
+  <form action="https://formsubmit.co/prajapatiakash123@gmail.com" method="POST">
+    <label for="insurance">Choose Insurance Type:</label>
+    <select name="insurance" id="insurance" required>
+      <option value="">--Select--</option>
+      <option value="Car Insurance">Car Insurance</option>
+      <option value="Bike Insurance">Bike Insurance</option>
+      <option value="Gold Insurance">Gold Insurance</option>
+      <option value="Home Insurance">Home Insurance</option>
+    </select>
+
+    <label for="name">Full Name:</label>
+    <input type="text" id="name" name="name" placeholder="Your full name" required />
+
+    <label for="phone">Mobile Number:</label>
+    <input type="tel" id="phone" name="phone" placeholder="Your mobile number" required />
+
+    <label for="email">Email Address:</label>
+    <input type="email" id="email" name="email" placeholder="Your email" required />
+
+    <button type="submit">Submit</button>
+  </form>
+</body>
+</html>
